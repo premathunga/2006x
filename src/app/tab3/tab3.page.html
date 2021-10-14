@@ -1,0 +1,36 @@
+<ion-header translucent>
+  <ion-toolbar class="ion-center">
+    <ion-title>2006 O/L</ion-title>
+    <ion-title size="small">මෝ/ඇතිමලේ මහ විදුහ​ල❤️</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar 
+    [(ngModel)]="searchName"
+      (ionChange)="search()"
+      showCancelButton="focus"
+      color="primary"
+      placeholder="Search Contacts"
+      animated
+      ></ion-searchbar>
+      
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content #content padding text-wrap>
+  <ion-row>
+    <ion-col size="12" *ngFor="let cont of police">
+      <ion-item class="ion-text-wrap">
+        <ion-label text-wrap>
+          <h2>දිනය : {{cont.date}}</h2>
+          <p>ස්ථානය : {{cont.location}}</p>
+          <p>විස්තර : {{cont.info}}</p>
+          <ion-button xtend="block" color="light" href="tel:0{{cont.call}}">
+            <ion-icon slot="start" name="call"></ion-icon>
+             සංවිධායක :0{{cont.call}}
+          </ion-button>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-content>

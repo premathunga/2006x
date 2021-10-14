@@ -1,0 +1,7 @@
+{
+  "name": "2006x",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

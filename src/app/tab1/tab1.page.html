@@ -1,0 +1,44 @@
+<ion-header translucent>
+  <ion-toolbar class="ion-center">
+    <ion-title>2006 O/L</ion-title>
+    <ion-title size="small">මෝ/ඇතිමලේ මහ විදුහ​ල❤️</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar 
+    [(ngModel)]="searchName"
+      (ionChange)="search()"
+      showCancelButton="focus"
+      color="primary"
+      placeholder="Search Contacts"
+      animated
+      ></ion-searchbar>
+      
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col size="12" *ngFor="let cont of police">
+
+      <ion-item class="item-background-color">
+          <ion-avatar slot="start">
+              <img src="https://classmate.teamxdevelopers.com/app/profile/{{cont.number}}.jpeg">
+          </ion-avatar>
+          <ion-label>
+            <h2>{{cont.name}}</h2>
+            <p>0{{cont.number}}</p>
+          </ion-label>
+  
+  
+          <ion-button xtend="block" color="none" href="tel:0{{cont.number}}">
+              <ion-icon slot="start" name="call"></ion-icon>
+          </ion-button>
+
+        
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
